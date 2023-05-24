@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="cs/styles.css" />
+  </head>
+  <body>
+    <div class="cabecero">
+      <div class="presupuesto">
+        <div class="presupuesto_titulo">Presupuesto disponible</div>
+        <div class="presupuesto_valor" id="presupuesto">2'000.000</div>
+
+        <div class="presupuesto_ingreso limpiarEstilos">
+          <div class="presupuesto_ingreso--texto">Ingresos</div>
+          <div class="derecha limpiarEstilos">
+            <div class="presupuesto_ingreso--valor" id="ingresos">
+              + 400.000
+            </div>
+            <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+          </div>
+        </div>
+
+        <div class="presupuesto_egreso limpiarEstilos">
+          <div class="presupuesto_egreso--texto">Egresos</div>
+          <div class="derecha limpiarEstilos">
+            <div class="presupuesto_egreso--valor" id="egresos">- 300.000</div>
+            <div class="presupuesto_egreso--porcentaje" id="porcentaje">
+              30%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <form id="forma">
+      <div class="agregar">
+        <div class="agregar_contenedor">
+          <select  id="tipo" class="agregar_tipo">
+            <option value="ingreso" selected>+</option>
+            <option value="egreso">-</option>
+          </select> 
+          <input name='descripcion' type="text" class="agregar_descripcion" placeholder="Agregar Descripcion" id="descripcion">
+          <input name='valor' type="number" class="agregar_valor" id="valor" placeholder='Valor'>
+          <button class="agregar_btn" type="submit">
+            <ion-icon name="checkmark-done-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </form>
+
+
+    <div class="contenedor limpiarEstilos">
+      <div class="ingreso">
+        <h2 class="ingreso_titulo">Ingresos</h2>
+        <div id="lista-ingresos">
+          <div class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">Descripci</div>
+            <div class="derecha limpiarEstilos">
+              <div class="elemento_valor">2222</div>
+              <div class="elemento_eliminar">
+                <button class="elemento_eliminar--btn">
+                  <ion-icon name="close-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="egreso">
+        <h2 class="egreso_titulo">Egresos</h2>
+        <div id="lista-egresos">
+          <div class="elemento limpiarEstilos">
+            <div class="elemento_descripcion">Descripci</div>
+            <div class="derecha limpiarEstilos">
+              <div class="elemento_valor">2222</div>
+              <div class="elemento_eliminar">
+                <button class="elemento_eliminar--btn boton">
+                  <ion-icon   name="close-outline"></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+
+
+    <script src="js/clases/Dato.js"></script>
+    <script src="js/clases/Ingreso.js"></script>
+    <script src="js/clases/Egreso.js"></script>
+    <script src="js/main.js" defer></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
